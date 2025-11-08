@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const verifyToken = require('../middleware/authMiddleware');
 const { getMatches, approveReturn } = require('../controllers/adminController');
+const { getUnmatchedItems } = require('../controllers/adminController');
 
 // Only admin can access
 function isAdmin(req, res, next) {
@@ -11,6 +12,7 @@ function isAdmin(req, res, next) {
 }
 
 router.get('/matches', verifyToken, isAdmin, getMatches);
+router.get('/unmatched', verifyToken, isAdmin, getUnmatchedItems);
 router.put('/approve/:foundId', verifyToken, isAdmin, approveReturn);
 
 module.exports = router;
