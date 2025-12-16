@@ -23,6 +23,11 @@ async function loadLost() {
   });
 }
 
+function showImage(filename) {
+  document.getElementById("popupImage").src = `${BASE_URL}/uploads/${filename}`;
+  new bootstrap.Modal(document.getElementById("imageModal")).show();
+}
+
 // Load Found Items
 async function loadFound() {
   const res = await fetch(`${BASE_URL}/api/found/my`, {

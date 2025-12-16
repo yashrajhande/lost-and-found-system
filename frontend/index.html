@@ -3,27 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <title>Lost & Found System | Home</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      background: #f4f7ff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .hero-card {
+      background: white;
+      width: 550px;
+      border-radius: 18px;
+      padding: 40px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.10);
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .app-logo {
+  border-radius: 50%;
+  width: 140px;      /* Increased */
+  height: 140px;     /* Increased */
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15); /* Makes it premium */
+}
+
+
+    .btn-custom {
+      font-size: 18px;
+      border-radius: 10px;
+      width: 180px;
+      padding: 10px;
+      transition: 0.2s;
+    }
+
+    .btn-custom:hover {
+      transform: scale(1.05);
+    }
+
+  </style>
 
 </head>
 
-<body class="bg-light">
+<body>
 
-<nav class="navbar navbar-dark bg-primary p-3">
-  <h4 class="text-white m-auto">College Lost & Found System</h4>
+<!-- ✅ NAVBAR -->
+<nav class="navbar navbar-dark bg-primary p-3 shadow">
+  <h4 class="text-white mx-auto fw-bold"><i class="fa-solid fa-school-flag"></i> College Lost & Found System</h4>
 </nav>
 
-<div class="container text-center" style="margin-top: 100px;">
-  <img src="assets/logo.png" alt="logo" width="120">
+<!-- ✅ CENTER HERO CARD -->
+<div class="d-flex justify-content-center align-items-center" style="height:85vh;">
+  <div class="hero-card text-center">
 
-  <h2 class="mt-4">Welcome to Lost & Found Portal</h2>
-  <p class="text-muted">Helping students find their lost items with ease</p>
+    <!-- LOGO -->
+    <img src="assets/logo.png" class="app-logo" alt="Logo">
 
-  <div class="mt-4">
-    <a href="login.html" class="btn btn-primary btn-lg m-2">Login</a>
-    <a href="register.html" class="btn btn-outline-primary btn-lg m-2">Register</a>
+    <h2 class="fw-bold mb-2">Welcome to Lost & Found Portal</h2>
+    <p class="text-muted">Helping students to find lost items quickly and securely ✨</p>
+
+    <!-- ✅ BUTTONS -->
+    <div class="mt-4">
+      <a href="login.html" class="btn btn-primary btn-custom me-2">
+        <i class="fa-solid fa-right-to-bracket"></i> Login
+      </a>
+
+      <a href="register.html" class="btn btn-outline-primary btn-custom">
+        <i class="fa-solid fa-user-plus"></i> Register
+      </a>
+    </div>
+
   </div>
 </div>
 

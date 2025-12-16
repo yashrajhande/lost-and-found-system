@@ -18,7 +18,7 @@ async function loadMatches() {
   body.innerHTML = "";
 
   if (data.length === 0) {
-    body.innerHTML = `<tr><td colspan="9" class="text-center">✅ No matched items pending approval</td></tr>`;
+    body.innerHTML = `<tr><td colspan="9" class="text-center">No matched items pending approval</td></tr>`;
     return;
   }
 
@@ -63,7 +63,7 @@ async function loadUnmatched() {
   const { lost, found } = data;
 
   if (lost.length === 0 && found.length === 0) {
-    body.innerHTML = `<tr><td colspan="6" class="text-center">✅ No unmatched items</td></tr>`;
+    body.innerHTML = `<tr><td colspan="6" class="text-center">No unmatched items</td></tr>`;
     return;
   }
 
