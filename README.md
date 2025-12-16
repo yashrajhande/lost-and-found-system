@@ -1,5 +1,5 @@
 
-# Lost & Found Management System (College Project)
+# Lost & Found Management System (DBMS Course Project)
 
 A smart system that helps students report **Lost** or **Found** items inside campus.  
 Uses **image upload, auto-matching, email notification, and admin approval**.
